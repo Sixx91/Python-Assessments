@@ -56,7 +56,7 @@ def create_credentials(file_path):
     enc_password = encrypt_text(password)
     
     with open(file_path, 'a') as file:
-        file.write(f"{site}\n,{username},{enc_password}")
+        file.write(f"{site},{username},{enc_password}")
     
     print(f"Your credentials have been stored.")
 

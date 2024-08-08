@@ -50,16 +50,15 @@ def view_credentials(file_path):
 
 # Function to create new credentials
 def create_credentials(file_path):
-    site = input("Enter the website name: ")
-    username = input("Enter your username: ")
-    password = input("Enter the password: ")
+    site = input("\nEnter the website name: ")
+    username = input("\nEnter your username: ")
+    password = input("\nEnter the password: ") 
     enc_password = encrypt_text(password)
     
     with open(file_path, 'a') as file:
-        file.write(f"{site},{username},{enc_password}")
+        file.write(f"{site}\n,{username},{enc_password}")
     
-    print(f"Credentials for '{site}' stored.")
-
+    print(f"Your credentials have been stored.")
 
 # Main program
 def main():
@@ -71,7 +70,7 @@ def main():
     
     while choice != 'q':
         # Display menu
-        print("[1] Enter 1 to create new credentials.")
+        print("[1] Enter 1 to create new credentials")
         print("[2] Enter 2 to view stored credentials")
         print("[3] Enter q to quit \n")
         
